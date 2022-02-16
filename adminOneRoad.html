@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--???-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="admin_style.css">
+    <link rel="stylesheet" media="screen" href="media.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗемляИрк</title>
+</head>
+
+<body class="container">
+    <header class="container row no-gutters">
+        <nav class="navbar navbar-expand-lg navbar-dark col-12">
+            <a class="navbar-brand" href="#">ЗемляИрк</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav col-12">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Заявки
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminRequests.html">Все заявки</a>
+                            <a class="dropdown-item" href="#">Мои заявки</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Пользователи
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminUsers.html">Все пользователи</a>
+                            <a class="dropdown-item" href="adminRoles.html">Права</a>
+                            <a class="dropdown-item" href="#">Клиенты в моих заявках</a>
+                            <a class="dropdown-item" href="adminTeam.html">Наша команда</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="adminMess.html">Сообщения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adminFeedback.html">Обратная связь</a>
+                    </li>
+
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Объекты
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminObj.html">Все объекты</a>
+                            <a class="dropdown-item active" href="adminRoads.html">Все тракты и пункты</a>
+                        </div>
+                    </li>
+                    <li class="nav-item flex-grow-1 text-right">
+                        <a class="nav-link" href="#"> <i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+        <section>
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <a href="admin.html">Панель администратора</a>
+                <a href="adminRoads.html">Все тракты и пункты</a>
+                <p>Александровский тракт</p>
+            </div>
+            <!-- <h4 class="user">Иван Иванов</h4> -->
+
+            <div class="row justify-content-between">
+
+                <h1 class="pl-md-3">Александровский тракт <a href="adminAddRoad.html" class="fas fa-pen m-auto "></a> </h1>
+                <h2><a href="#" class="fas fa-trash m-auto text-right pr-md-3"></a></h2>
+            </div>
+        </section>
+
+        <section class="row my-4 mx-0">
+            <div class="col-md-6 col-12 p-md-0">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi et itaque, dolorem earum voluptate
+                    alias dolore voluptas nulla! Quos obcaecati ut officia veritatis consequuntur fugit saepe dolores
+                    rerum voluptatum facere!</p>
+            </div>
+            <div class="col-md-6 col-12 text-md-right text-center p-0 pl-md-2">
+                <img src="images/no-photo.jpg" width="130px">
+                <img src="images/no-photo.jpg" width="130px">
+                <img src="images/no-photo.jpg" width="130px">
+                <img src="images/no-photo.jpg" width="130px">
+                <img src="images/no-photo.jpg" width="130px">
+                <img src="images/no-photo.jpg" width="130px">
+            </div>
+        </section>
+        
+        <section>
+            <div>
+                <iframe src="https://yandex.ru/map-widget/v1/-/CCUQ6GH-TB" width="100%" height="500"
+                    allowfullscreen="true"></iframe>
+            </div>
+            <div>
+                <img src="images/graph.png" width="100%">
+            </div>
+        </section>
+        <section>
+            <ul class="nav nav-pills">
+                <li class="nav-item col-md-2 col-12 pl-md-0">
+                    <a class="nav-link active" href="#" >Все</a>
+                </li>
+                <li class="nav-item col-md-2 col-12">
+                    <a class="nav-link" href="#">Садоводства</a>
+                </li>
+                <li class="nav-item col-md-2 col-12">
+                    <a class="nav-link" href="#">Местности</a>
+                </li>
+                <li class="nav-item col-md-3 col-12">
+                    <a class="nav-link" href="#">Населенные пункты</a>
+                </li>
+                <li class="nav-item col-md-3 col-12 pr-md-0">
+                    <a class="nav-link" href="#">Коттеджные поселки</a>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="table-responsive mt-3">
+                <table class="table">
+                    <thead class="bg-primary text-light">
+                        <tr>
+                            <th scope="col">Александровский тракт</th>
+                            <th scope="col">Удаленность</th>
+                            <th scope="col">Земель</th>
+                            <th scope="col">Коттеджей</th>
+                            <th scope="col">Дач</th>
+                            <th scope="col">Ср. цена/сотку</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">Прибайкальская Усадьба</a></td>
+                            <td >1</td>
+                            <td>23</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"> Баргузинская Долина</a></td>
+                            <td>2</td>
+                            <td>34</td>
+                            <td>56</td>
+                            <td>67</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Курумканский</a></td>
+                            <td>3</td>
+                            <td>34</td>
+                            <td>31</td>
+                            <td>11</td>
+                            <td>23</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+    <wbr>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+        <script src="jquery-3.6.0.min.js"></script>
+
+    <script src="script.js"></script>
+    <!-- <script id="rendered-js" >
+    //# sourceURL=pen.js
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--???-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="admin_style.css">
+    <link rel="stylesheet" media="screen" href="media.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗемляИрк</title>
+</head>
+
+<body class="container">
+    <header class="container row no-gutters">
+        <nav class="navbar navbar-expand-lg navbar-dark col-12">
+            <a class="navbar-brand" href="#">ЗемляИрк</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav col-12">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Заявки
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminRequests.html">Все заявки</a>
+                            <a class="dropdown-item" href="#">Мои заявки</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Пользователи
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminUsers.html">Все пользователи</a>
+                            <a class="dropdown-item" href="adminRoles.html">Права</a>
+                            <a class="dropdown-item" href="#">Клиенты в моих заявках</a>
+                            <a class="dropdown-item" href="adminTeam.html">Наша команда</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adminMess.html">Сообщения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adminFeedback.html">Обратная связь</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Объекты
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminObj.html">Все объекты</a>
+                            <a class="dropdown-item" href="adminRoads.html">Все тракты и пункты</a>
+                        </div>
+                    </li>
+                    <li class="nav-item flex-grow-1 text-right">
+                        <a class="nav-link" href="#"> <i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <section>
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <p>Панель администратора</p>
+            </div>
+
+            <h1>Здравствуйте, Иван Иванов!</h1>
+            <!-- <div class="notification">
+                <h2>Напоминаем, что:</h2>
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et deleniti 
+                tempore labore repellat quod cum culpa saepe harum magnam. 
+                Labore voluptate, eligendi nam quod libero eaque molestias sunt? 
+                Animi, omnis.
+                </p>
+            </div> -->
+            <div class="alert alert-primary" role="alert">
+                <h4 class="alert-heading">Напоминаем, что:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aliquam officiis, voluptas molestias
+                    iste est ea odit aperiam necessitatibus obcaecati corporis, illum blanditiis magnam mollitia dolor
+                    eius eum dolorum commodi.</p>
+                <hr>
+                <p class="mb-0">Когда Вам нужно, обязательно используйте маржинальные утилиты, чтобы все было в порядке
+                    и порядке.</p>
+            </div>
+        </section>
+    </main>
+    <wbr>
+    <!-- <footer>
+        <div>
+            <p> OOO "ЗемляИрк", 2021</p>
+        </div>
+    </footer> -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+        <script src="jquery-3.6.0.min.js"></script>
+
+    <script src="script.js"></script>
+    <!-- <script id="rendered-js" >
+    //# sourceURL=pen.js
+    </script> -->
+</body>
+
+</html>

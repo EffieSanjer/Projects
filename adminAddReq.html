@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--???-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="admin_style.css">
+    <link rel="stylesheet" media="screen" href="media.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗемляИрк</title>
+</head>
+
+<body class="container">
+    <header class="container row no-gutters">
+        <nav class="navbar navbar-expand-lg navbar-dark col-12">
+            <a class="navbar-brand" href="#">ЗемляИрк</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav col-12">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Заявки
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item active" href="adminRequests.html">Все заявки</a>
+                            <a class="dropdown-item" href="#">Мои заявки</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Пользователи
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminUsers.html">Все пользователи</a>
+                            <a class="dropdown-item" href="adminRoles.html">Права</a>
+                            <a class="dropdown-item" href="#">Клиенты в моих заявках</a>
+                            <a class="dropdown-item" href="adminTeam.html">Наша команда</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="adminMess.html">Сообщения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adminFeedback.html">Обратная связь</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Объекты
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminObj.html">Все объекты</a>
+                            <a class="dropdown-item" href="adminRoads.html">Все тракты и пункты</a>
+                        </div>
+                    </li>
+                    <li class="nav-item flex-grow-1 text-right">
+                        <a class="nav-link" href="#"> <i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+        <section>
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <a href="admin.html">Панель администратора</a>
+                <a href="adminRequests.html">Все заявки</a>
+                <p>Создать заявку</p>
+            </div>
+            <!-- <h4 class="user">Иван Иванов</h4> -->
+
+            <h1>Создать заявку</h1>
+        </section>
+        <section>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-7 col-12">
+                        <label for="name" class="col-form-label">Название заявки</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group col-md-5 col-12">
+                        <label class="col-form-label">Тип объекта</label>
+                        <select class="form-control">
+                            <option>Земельный участок</option>
+                            <option>Земельный участок</option>
+                            <option>Земельный участок</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4 col-12">
+                        <label for="seller" class="col-form-label">Продавец <a href="#" class="fas fa-plus" data-toggle="modal" data-target="#exampleModal"></a></label>
+                        <input type="text" class="form-control col-12 my-1" id="seller">
+                    </div>
+                    <div class="form-group col-md-4 col-12">
+                        <label for="buyer" class="col-form-label">Покупатель <a href="#"
+                                class="fas fa-plus" data-toggle="modal" data-target="#exampleModal"></a></label>
+                        <input type="text" class="form-control col-12 my-1" id="buyer">
+                    </div>
+                    <div class="form-group col-md-4 col-12">
+                        <label class="col-form-label">Офис </label>
+                        <select class="form-control my-1">
+                            <option>Офис на Ленина</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true" data-backdrop="static">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Добавить</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="id" class="col-form-label">Введите ID:</label>
+                                        <input type="text" class="form-control" id="id">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3 col-12">
+                        <label for="date" class="col-form-label">Дата окончания</label>
+                        <input type="date" class="form-control" id="date">
+                    </div>
+                    <div class="form-group col-md-3 col-12">
+                        <label class="col-form-label">Срочность</label>
+                        <select class="form-control">
+                            <option value="">Обычная</option>
+                            <option value="">Срочная</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3 col-12">
+                        <label class="col-form-label">Статус</label>
+                        <select class="form-control">
+                            <option value="">Активна</option>
+                            <option value="">Приостановлена</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3 col-12">
+                        <label class="col-form-label">Вид заявки</label>
+                        <select class="form-control">
+                            <option value="">На продажу</option>
+                            <option value="">На покупку</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="note-text" class="col-form-label">Описание:</label>
+                    <textarea class="form-control" id="note-text"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 col-12">
+                        <div class="list-group docs" style="height:210px;">
+                            <div href="#" class="list-group-item list-group-item-action">
+                                <div class="d-sm-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><a href=""> Документ.docx</a></h5>
+                                    <p class="w-100 d-flex justify-content-sm-around justify-content-between">
+                                        <small>1.2Мб</small>
+                                        <small>01.02.2021</small>
+                                    </p>
+                                </div>
+                                <p class="d-flex w-100 justify-content-between py-1 m-0">
+                                    <small>Олег Банкин</small>
+                                    <a href="#" class="fas fa-trash badge-pill"></a>
+                                </p>
+                            </div>
+                            <div href="#" class="list-group-item list-group-item-action">
+                                <div class="d-sm-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><a href=""> Документ.docx</a></h5>
+                                    <p class="w-100 d-flex justify-content-sm-around justify-content-between">
+                                        <small>1.2Мб</small>
+                                        <small>01.02.2021</small>
+                                    </p>
+                                </div>
+                                <p class="d-flex w-100 justify-content-between py-1 m-0">
+                                    <small>Олег Банкин</small>
+                                    <a href="#" class="fas fa-trash badge-pill"></a>
+                                </p>
+                            </div>
+                            <div href="#" class="list-group-item list-group-item-action">
+                                <div class="d-sm-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><a href=""> Документ.docx</a></h5>
+                                    <p class="w-100 d-flex justify-content-sm-around justify-content-between">
+                                        <small>1.2Мб</small>
+                                        <small>01.02.2021</small>
+                                    </p>
+                                </div>
+                                <p class="d-flex w-100 justify-content-between py-1 m-0">
+                                    <small>Олег Банкин</small>
+                                    <a href="#" class="fas fa-trash badge-pill"></a>
+                                </p>
+                            </div>
+                            <div href="#" class="list-group-item list-group-item-action">
+                                <div class="d-sm-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><a href=""> Документ.docx</a></h5>
+                                    <p class="w-100 d-flex justify-content-sm-around justify-content-between">
+                                        <small>1.2Мб</small>
+                                        <small>01.02.2021</small>
+                                    </p>
+                                </div>
+                                <p class="d-flex w-100 justify-content-between py-1 m-0">
+                                    <small>Олег Банкин</small>
+                                    <a href="#" class="fas fa-trash badge-pill"></a>
+                                </p>
+                            </div>
+                            <div href="#" class="list-group-item list-group-item-action">
+                                <div class="d-sm-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"><a href=""> Документ.docx</a></h5>
+                                    <p class="w-100 d-flex justify-content-sm-around justify-content-between">
+                                        <small>1.2Мб</small>
+                                        <small>01.02.2021</small>
+                                    </p>
+                                </div>
+                                <p class="d-flex w-100 justify-content-between py-1 m-0">
+                                    <small>Олег Банкин</small>
+                                    <a href="#" class="fas fa-trash badge-pill"></a>
+                                </p>
+                            </div>
+
+
+                        </div>
+                        <p class="p-2 m-0"><a href="#" class="fas fa-paperclip"></a></p>
+                    </div>
+
+                    <div class="form-group col-md-6 col-12">
+                        <div class="card">
+                            <p class="card-header p-2">Участники</p>
+                            <ul class="list-group list-group-flush members">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Петр Птеров
+                                    <a href="#" class="fas fa-trash badge-pill"></a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Иван Картонкин
+                                    <a href="#" class="fas fa-trash badge-pill"></a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Екатерина Суглина
+                                    <a href="#" class="fas fa-trash badge-pill"></a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Марина Вокина
+                                    <a href="#" class="fas fa-trash badge-pill"></a>
+                                </li>
+                            </ul>
+
+                            <p class="p-2 m-0"><a href="#" class="fas fa-plus"></a></p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="row py-4 w-100 my-md-3 mx-auto justify-content-end">
+                    <button type="submit" class="btn btn-secondary col-md-3 col-12 mx-md-2 my-1">Отменить</button>
+                    <button type="submit" class="btn btn-success col-md-3 col-12 mx-md-2 my-1">Создать</button>
+                </div>
+            </form>
+
+        </section>
+
+    </main>
+    <wbr>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+        <script src="jquery-3.6.0.min.js"></script>
+
+    <script src="script.js"></script>
+    <!-- <script id="rendered-js" >
+    //# sourceURL=pen.js
+    </script> -->
+</body>
+
+</html>

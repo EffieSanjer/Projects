@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--???-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="admin_style.css">
+    <link rel="stylesheet" media="screen" href="media.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗемляИрк</title>
+</head>
+
+<body class="container">
+    <header class="container row no-gutters">
+        <nav class="navbar navbar-expand-lg navbar-dark col-12">
+            <a class="navbar-brand" href="#">ЗемляИрк</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav col-12">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Заявки
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminRequests.html">Все заявки</a>
+                            <a class="dropdown-item" href="#">Мои заявки</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Пользователи
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminUsers.html">Все пользователи</a>
+                            <a class="dropdown-item" href="adminRoles.html">Права</a>
+                            <a class="dropdown-item" href="#">Клиенты в моих заявках</a>
+                            <a class="dropdown-item" href="adminTeam.html">Наша команда</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="adminMess.html">Сообщения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adminFeedback.html">Обратная связь</a>
+                    </li>
+
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Объекты
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item active" href="adminObj.html">Все объекты</a>
+                            <a class="dropdown-item" href="adminRoads.html">Все тракты и пункты</a>
+                        </div>
+                    </li>
+                    <li class="nav-item flex-grow-1 text-right">
+                        <a class="nav-link" href="#"> <i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+        <section>
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <a href="admin.html">Панель администратора</a>
+                <a href="adminObj.html">Все объекты</a>
+                <p>Объект №12345</p>
+            </div>
+            <!-- <h4 class="user">Иван Иванов</h4> -->
+            <div class="row justify-content-between">
+
+                <h1 class="pl-md-3">Объект №12345 <a href="adminAddPlace.html" class="fas fa-pen m-auto "></a> </h1>
+                <h2><a href="#" class="fas fa-trash m-auto text-right pr-md-3"></a></h2>
+            </div>
+        </section>
+
+        <section class="row my-4 mx-0">
+            <div class="col-md-7 col-12 p-0 table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Дата обновления</th>
+                            <td>10.02.2021</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Площадь</th>
+                            <td>106 соток</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Стоимость</th>
+                            <td>2050 тыс.р.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Second</th>
+                            <td>Lorem</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Third</th>
+                            <td>Lorem</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Last</th>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque tempora eveniet harum
+                                ipsum vel repudiandae perspiciatis cupiditate corrupti, iusto inventore consequuntur
+                                necessitatibus deserunt delectus eius accusantium autem voluptatum omnis fugit!</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-5 col-12 text-md-right text-center p-0 pl-md-2">
+                <img src="images/no-photo.jpg" width="130px">
+                <img src="images/no-photo.jpg" width="130px">
+                <img src="images/no-photo.jpg" width="130px">
+                <img src="images/no-photo.jpg" width="130px">
+                <img src="images/no-photo.jpg" width="130px">
+                <img src="images/no-photo.jpg" width="130px">
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <iframe src="https://yandex.ru/map-widget/v1/-/CCUQ6GH-TB" width="100%" height="500"
+                    allowfullscreen="true"></iframe>
+            </div>
+        </section>
+
+        <section>
+            <div class="col-lg-12 col-12 p-0">
+                <div class="card p-0 col-12 ">
+                    <div class="card-header">
+                        1 февраля 2021
+                    </div>
+                    <form class="card-body">
+                        <h4 class="card-title">Иван Иванов</h4>
+                        <div class="card-text">
+                            <textarea class="w-100 form-control" rows="5" placeholder="Комментарий"></textarea>
+                        </div>
+                        <div class="text-right my-2"><button class="btn btn-primary" type="submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 mt-3 comments p-0">
+                    <div class="card p-0 col-12 my-2">
+                        <div class="card-header row px-5 py-2 justify-content-between align-items-center">
+                            <p class="m-0 "> 1 февраля 2021</p>
+                            <a href="#" class="fas fa-trash"></a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Иван Иванов </h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus cum tenetur,
+                                nam
+                                ullam
+                                officia officiis minima esse dolore earum quo, rerum odio fugiat cupiditate quaerat
+                                eligendi.
+                                Suscipit hic maxime quam.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card p-0 col-12 my-2">
+                        <div class="card-header row px-5 py-2 justify-content-between align-items-center">
+                            <p class="m-0 "> 1 февраля 2021</p>
+                            <a href="#" class="fas fa-trash"></a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Иван Иванов</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus cum tenetur,
+                                nam
+                                ullam
+                                officia officiis minima esse dolore earum quo, rerum odio fugiat cupiditate quaerat
+                                eligendi.
+                                Suscipit hic maxime quam.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card p-0 col-12 my-2">
+                        <div class="card-header row px-5 py-2 justify-content-between align-items-center">
+                            <p class="m-0 "> 1 февраля 2021</p>
+                            <a href="#" class="fas fa-trash"></a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Иван Иванов</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus cum tenetur,
+                                nam
+                                ullam
+                                officia officiis minima esse dolore earum quo, rerum odio fugiat cupiditate quaerat
+                                eligendi.
+                                Suscipit hic maxime quam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <wbr>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+        <script src="jquery-3.6.0.min.js"></script>
+
+    <script src="script.js"></script>
+    <!-- <script id="rendered-js" >
+    //# sourceURL=pen.js
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--???-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="admin_style.css">
+    <link rel="stylesheet" media="screen" href="media.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗемляИрк</title>
+</head>
+
+<body class="container">
+    <header class="container row no-gutters">
+        <nav class="navbar navbar-expand-lg navbar-dark col-12">
+            <a class="navbar-brand" href="#">ЗемляИрк</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav col-12">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Заявки
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminRequests.html">Все заявки</a>
+                            <a class="dropdown-item" href="#">Мои заявки</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Пользователи
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminUsers.html">Все пользователи</a>
+                            <a class="dropdown-item" href="adminRoles.html">Права</a>
+                            <a class="dropdown-item" href="#">Клиенты в моих заявках</a>
+                            <a class="dropdown-item" href="adminTeam.html">Наша команда</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="adminMess.html">Сообщения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adminFeedback.html">Обратная связь</a>
+                    </li>
+
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Объекты
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item active" href="adminObj.html">Все объекты</a>
+                            <a class="dropdown-item" href="adminRoads.html">Все тракты и пункты</a>
+                        </div>
+                    </li>
+                    <li class="nav-item flex-grow-1 text-right">
+                        <a class="nav-link" href="#"> <i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+        <section>
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <a href="admin.html">Панель администратора</a>
+                <a href="adminObj.html">Все объекты</a>
+                <p>Добавить участок</p>
+            </div>
+            <!-- <h4 class="user">Иван Иванов</h4> -->
+            <h1 class="col-md-6 col-12">Добавить участок</h1>
+        </section>
+        <!-- <section>
+            <div class="input-group row mb-3 no-gutters">
+                <div class="col-lg-4 col-12 row">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Продавец</span>
+                    </div>
+                    <input type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon10">Телефон</span>
+                </div>
+                <input type="number" class="form-control col-lg-3" aria-describedby="basic-addon10">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon11">Кадастровый номер</span>
+                </div>
+                <input type="number" class="form-control col-lg-3 col-12" aria-describedby="basic-addon11">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Тип объекта</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option>Земельный участок</option>
+                    <option>Дача</option>
+                    <option>Коттедж</option>
+                    <option>Промышленная база</option>
+                </select>
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect02">Направление</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect02">
+                    <option>Александровский тракт</option>
+                    <option>Култукский тракт</option>
+                    <option>В сторону Мельничной Пади</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect03">Предок</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect03">
+                    <option>Садоводство "Вишенка"</option>
+                    <option>Садоводство "Яблочко"</option>
+                </select>
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Удаленность от предка</span>
+                </div>
+                <input type="number" class="form-control">
+                <div class="input-group-append">
+                    <span class="input-group-text">км</span>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Улица</span>
+                </div>
+                <input type="text" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Дом</span>
+                </div>
+                <input type="text" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Дополнения</span>
+                </div>
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect03">Назначение</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect03">
+                    <option>Для хозяйства</option>
+                </select>
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect03">Владение</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect03">
+                    <option>Собственность</option>
+                </select>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Описание</span>
+                </div>
+                <textarea class="form-control" aria-label="Описание"></textarea>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Статус</span>
+                </div>
+                <select class="custom-select">
+                    <option>Активен</option>
+                    <option>Скрыт</option>
+                </select>
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Рейтинг</span>
+                </div>
+                <input type="number" min="0" max="5" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Источник</span>
+                </div>
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Ссылка на обзор</span>
+                </div>
+                <input type="text" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Ответственный</span>
+                </div>
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Стоимость продавца</span>
+                </div>
+                <input type="number" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Комиссия</span>
+                </div>
+                <input type="number" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Общая стоимость</span>
+                </div>
+                <input type="number" class="form-control">
+                <div class="input-group-append">
+                    <span class="input-group-text">тыс. руб.</span>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <label class="form-control col-12">Хорошая цена</label>
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <label class="form-control">Торг</label>
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <label class="form-control">Инвестиционная привлекательность</label>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon12">Условия цены</span>
+                </div>
+                <input type="text" class="form-control" aria-describedby="basic-addon12">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text">Характеристики</label>
+                </div>
+                <select class="custom-select">
+                    <option>Свежий воздух</option>
+                </select>
+                <label class="input-group-text fas fa-plus pt-2"></label>
+                <div class="input-group-prepend">
+                    <label class="input-group-text">Инфраструктура</label>
+                </div>
+                <select class="custom-select">
+                    <option>Отличный забор</option>
+                </select>
+                <label class="input-group-text fas fa-plus pt-2"></label>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class=" flex-wrap">
+                        <button type="button" class="btn btn-primary my-2 mr-2">свежий воздух
+                            <a href="#" class="fas fa-trash"></a></button>
+                        <button type="button" class="btn btn-primary my-2 mr-2">красивый сад
+                            <a href="#" class="fas fa-trash"></a></button>
+                        <button type="button" class="btn btn-primary my-2 mr-2">красивый сад
+                            <a href="#" class="fas fa-trash"></a></button>
+                        <button type="button" class="btn btn-primary my-2 mr-2">красивый сад
+                            <a href="#" class="fas fa-trash"></a></button>
+                        <button type="button" class="btn btn-primary my-2 mr-2">красивый сад
+                            <a href="#" class="fas fa-trash"></a></button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="flex-wrap">
+                        <button type="button" class="btn btn-info my-2 mr-2">гараж
+                            <a href="#" class="fas fa-trash"></a>
+                        </button>
+                        <button type="button" class="btn btn-info my-2 mr-2">гараж
+                            <a href="#" class="fas fa-trash"></a>
+                        </button>
+                        <button type="button" class="btn btn-info my-2 mr-2">гараж
+                            <a href="#" class="fas fa-trash"></a>
+                        </button>
+                        <button type="button" class="btn btn-info my-2 mr-2">гараж
+                            <a href="#" class="fas fa-trash"></a>
+                        </button>
+                        <button type="button" class="btn btn-info my-2 mr-2">подполье
+                            <a href="#" class="fas fa-trash"></a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <label for="coor" class="mt-3">Координаты</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="coor">Широта</span>
+                </div>
+                <input type="text" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="coor">Долгота</span>
+                </div>
+                <input type="text" class="form-control">
+            </div>
+
+        </section> -->
+        <section>
+            <form>
+                <div class="form-row pl-1">
+                    <div class="form-group form-row col-lg-4">
+                        <label for="inputEmail4">Продавец</label>
+                        <input type="text" class="form-control col-11" id="inputEmail4">
+                        <a href="#" class="fas fa-plus m-auto"></a>
+                    </div>
+                    <div class="form-group col-lg-4 p-0 p-lg-1">
+                        <label for="inputPassword4">Телефон</label>
+                        <input type="text" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="form-group col-lg-4 p-0 p-lg-1">
+                        <label for="inputCadNum">Кадастровый номер</label>
+                        <input type="text" class="form-control" id="inputCadNum">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-lg-3">
+                        <label>Тип объекта</label>
+                        <select class="form-control">
+                            <option>Земельный участок</option>
+                            <option>Земельный участок</option>
+                            <option>Земельный участок</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-3">
+                        <label>Направление</label>
+                        <select class="form-control">
+                            <option>Александровский тракт</option>
+                            <option>В сторону Мельничной Пади</option>
+                            <option>Байкал</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-3">
+                        <label>Предок</label>
+                        <select class="form-control">
+                            <option>Садоводство "Бабочка"</option>
+                            <option>Садоводство "Вишенка"</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-row col-lg-3 justify-content-between">
+                        <label for="LongParent">Удаленность от предка</label>
+                        <input type="text" class="form-control col-10" id="LongParent">
+
+                        <label>км</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-6">
+                        <label for="inputГород">Улица</label>
+                        <input type="text" class="form-control" id="inputГород">
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <label for="inputДом">Дом</label>
+                        <input type="number" class="form-control" id="inputДом">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="inputZip">Дополнения</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+                </div>
+
+                <div class="form-row justify-content-between">
+                    <div class="form-group col-lg-4">
+                        <label>Назначение</label>
+                        <select class="form-control">
+                            <option>Для хозяйства</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label>Владение</label>
+                        <select class="form-control">
+                            <option>Собственность</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-row col-lg-2 pl-2">
+                        <label for="inputsq1" class="col-12">Площадь </label>
+                        <input type="text" class="form-control col-lg-8 col-11" id="inputsq1">
+                        <label class="ml-2">м<sup>2</sup></label>
+                    </div>
+                    <div class="form-group form-row col-lg-2 pr-0 pl-2">
+                        <label for="inputsq2" class="col-12 p-0">Площадь объекта</label>
+                        <input type="number" class="form-control col-lg-8 col-11" id="inputsq2">
+                        <label class="ml-2">м<sup>2</sup></label>
+                    </div>
+                </div>
+
+                <div class="form-row px-lg-1">
+                    <div class="form-group form-row col-lg-6 pl-2">
+                        <label>Характеристики</label>
+                        <select class="form-control col-11">
+                            <option>красивый садик</option>
+                            <option>свежий воздух</option>
+                        </select>
+                        <a href="#" class="fas fa-plus m-auto"></a>
+                    </div>
+                    <div class="form-group form-row col-lg-6 pl-2">
+                        <label>Инфраструктура</label>
+                        <select class="form-control col-11">
+                            <option>гараж</option>
+                            <option>подполье</option>
+                        </select>
+                        <a href="#" class="fas fa-plus m-auto"></a>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-lg-6">
+                        <div class=" flex-wrap">
+                            <button type="button" class="btn btn-primary my-2 mr-2">свежий воздух
+                                <a href="#" class="fas fa-trash"></a></button>
+                            <button type="button" class="btn btn-primary my-2 mr-2">красивый сад
+                                <a href="#" class="fas fa-trash"></a></button>
+                            <button type="button" class="btn btn-primary my-2 mr-2">красивый сад
+                                <a href="#" class="fas fa-trash"></a></button>
+                            <button type="button" class="btn btn-primary my-2 mr-2">красивый сад
+                                <a href="#" class="fas fa-trash"></a></button>
+                            <button type="button" class="btn btn-primary my-2 mr-2">красивый сад
+                                <a href="#" class="fas fa-trash"></a></button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="flex-wrap">
+                            <button type="button" class="btn btn-info my-2 mr-2">гараж
+                                <a href="#" class="fas fa-trash"></a>
+                            </button>
+                            <button type="button" class="btn btn-info my-2 mr-2">гараж
+                                <a href="#" class="fas fa-trash"></a>
+                            </button>
+                            <button type="button" class="btn btn-info my-2 mr-2">гараж
+                                <a href="#" class="fas fa-trash"></a>
+                            </button>
+                            <button type="button" class="btn btn-info my-2 mr-2">гараж
+                                <a href="#" class="fas fa-trash"></a>
+                            </button>
+                            <button type="button" class="btn btn-info my-2 mr-2">подполье
+                                <a href="#" class="fas fa-trash"></a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-12">
+                        <label>Описание</label>
+                        <textarea rows="5" class="form-control w-100"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-3">
+                        <label for="inputEmail10">Рейтинг</label>
+                        <input type="number" min="0" max="5" class="form-control" id="inputEmail10">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label>Статус</label>
+                        <select class="form-control">
+                            <option>Активен</option>
+                            <option>Скрыт</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-5">
+                        <label>Источник</label>
+                        <select class="form-control">
+                            <option>Авито</option>
+                            <option>Позвонил клиент</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-8">
+                        <label for="inputEmail24">Ссылка на обзор</label>
+                        <input type="text" class="form-control" id="inputEmail24">
+                    </div>
+                    <div class="form-group form-row col-lg-4">
+                        <label for="inputPassword14">Ответственный</label>
+                        <input type="text" class="form-control col-11" id="inputPassword14">
+                        <a href="#" class="fas fa-plus m-auto"></a>
+                    </div>
+                </div>
+
+                <div class="form-row pl-lg-1 justify-content-between">
+                    <div class=" form-row col-lg-3">
+                        <label for="inputEmail243" class="m-0 col-12">Стоимость продавца</label>
+                        <input type="text" class="form-control col-lg-7 col-10" id="inputEmail243">
+                        <label class="ml-1 mt-1">тыс. р.</label>
+                    </div>
+                    <div class=" form-row col-lg-2 px-lg-2 px-1">
+                        <label for="inputEmail242" class="m-0 col-12">Комиссия</label>
+                        <input type="text" class="form-control col-lg-6 col-10" id="inputEmail242">
+                        <label class="ml-1 mt-1">тыс. р.</label>
+                    </div>
+                    <div class="form-row col-lg-2 px-lg-2 px-1">
+                        <label for="inputEmail241" class="m-0 col-12">Общая сумма</label>
+                        <input type="text" class="form-control col-lg-6 col-10" id="inputEmail241">
+                        <label class="ml-1 mt-1">тыс. р.</label>
+                    </div>
+                    <div class="form-group col-lg-5 p-0">
+                        <label for="inputEmail245" class="mb-3">Условия цены</label>
+                        <input type="text" class="form-control" id="inputEmail245">
+                    </div>
+                </div>
+
+                <div class="form-row  mb-3 m-0 px-3">
+                    <div class="form-check col-12 col-lg-3">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Хорошая цена
+                        </label>
+                    </div>
+                    <div class="form-check col-12 col-lg-2">
+                        <input class="form-check-input" type="checkbox" id="gridCheck2">
+                        <label class="form-check-label" for="gridCheck2">
+                            Торг
+                        </label>
+                    </div>
+                    <div class="form-check col-12 col-lg-4">
+                        <input class="form-check-input" type="checkbox" id="gridCheck3">
+                        <label class="form-check-label" for="gridCheck3">
+                            Инвестиционная привлекательность
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row ">
+                    <div class="form-group col-lg-3 ">
+                        <label for="Широта">Широта</label>
+                        <input type="text" class="form-control" id="Широта">
+                    </div>
+                    <div class="form-group col-lg-3 ">
+                        <label for="Долгота">Долгота</label>
+                        <input type="text" class="form-control" id="Долгота">
+                    </div>
+                    <div class="form-group d-flex mb-3 col-lg-3 align-items-end justify-content-center ">
+                        <button type="submit" class="btn btn-outline-danger col-lg-10 col-12 ">Сбросить</button>
+                    </div>
+                    <div class="form-group d-flex mb-3 col-lg-3 align-items-end justify-content-center ">
+                        <button type="submit" class="btn btn-outline-primary col-12">Установить</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section>
+            <div>
+                <iframe src="https://yandex.ru/map-widget/v1/-/CCUQ6GH-TB" width="100%" height="500"
+                    allowfullscreen="true"></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h4 class="my-3">Фотографии <a href="#" class="fas fa-plus"></a></h4>
+            <div class="media flex-wrap">
+                <img src="images/no-photo.jpg" width="150px" class="mr-2"><a href="#" class="fas fa-trash mr-3"></a>
+                <img src="images/no-photo.jpg" width="150px" class="mr-2"><a href="#" class="fas fa-trash mr-3"></a>
+                <img src="images/no-photo.jpg" width="150px" class="mr-2"><a href="#" class="fas fa-trash mr-3"></a>
+            </div>
+        </section>
+
+        <section class="row py-4 w-100 my-md-3 mx-auto justify-content-end">
+            <button type="submit" class="btn btn-secondary col-md-3 col-12 mx-md-2 my-1">Отменить</button>
+            <button type="submit" class="btn btn-success col-md-3 col-12 mx-md-2 my-1">Добавить</button>
+
+
+        </section>
+    </main>
+    <wbr>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+        <script src="jquery-3.6.0.min.js"></script>
+
+    <script src="script.js"></script>
+    <!-- <script id="rendered-js" >
+    //# sourceURL=pen.js
+    </script> -->
+</body>
+
+</html>

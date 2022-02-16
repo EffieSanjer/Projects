@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--???-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="admin_style.css">
+    <link rel="stylesheet" media="screen" href="media.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗемляИрк</title>
+</head>
+
+<body class="container">
+    <header class="container row no-gutters">
+        <nav class="navbar navbar-expand-lg navbar-dark col-12">
+            <a class="navbar-brand" href="#">ЗемляИрк</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav col-12">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Заявки
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminRequests.html">Все заявки</a>
+                            <a class="dropdown-item" href="#">Мои заявки</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Пользователи
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminUsers.html">Все пользователи</a>
+                            <a class="dropdown-item" href="adminRoles.html">Права</a>
+                            <a class="dropdown-item" href="#">Клиенты в моих заявках</a>
+                            <a class="dropdown-item" href="adminTeam.html">Наша команда</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="adminMess.html">Сообщения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adminFeedback.html">Обратная связь</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle  active" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Объекты
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item  active" href="adminObj.html">Все объекты</a>
+                            <a class="dropdown-item" href="adminRoads.html">Все тракты и пункты</a>
+                        </div>
+                    </li>
+                    <li class="nav-item flex-grow-1 text-right">
+                        <a class="nav-link" href="#"> <i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+        <section>
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <a href="admin.html">Панель администратора</a>
+                <p>Объекты</p>
+            </div>
+            <!-- <h4 class="user">Иван Иванов</h4> -->
+
+            <h1>Объекты</h1>
+            <nav class="navbar bg-light search">
+                <form class="form-group p-0 col-12 m-0">
+                    <div class="row col-12 no-gutters p-0 justify-content-between">
+                        <div class="col-md-9">
+                            <input class="form-control" type="search" placeholder="Поиск" aria-label="Поиск">
+                        </div>
+                        <button class="btn btn-outline-primary col ml-md-2 mt-2 mt-md-0" type="submit">Поиск</button>
+
+                    </div>
+                    <div class="col-12 row p-0 no-gutters">
+                        <div class="col-xl-3 col-12">
+                            <!-- <input type="text" class="mr-1" size="3%" placeholder="№"> -->
+                            <input type="text" class="form-control my-2" placeholder="Телефон">
+                        </div>
+                        <div class="col-xl-5 col-md-6 form-inline col-12 px-xl-2 pl-xl-4 justify-content-between">
+                            <input type="number" class="form-control col-12 col-md-5 my-2 mr-2">
+                            <input type="number" class="form-control col-12 col-md-5 my-2 ">
+                            <label>руб.</label>
+                        </div>
+                        <div class="col-xl-4 col-md-6 form-inline col-12 px-md-2 justify-content-between">
+                            <input type="number" class="form-control col-12 col-md-5 my-2 mr-2">
+                            <input type="number" class="form-control col-12 col-md-5 my-2 ">
+                            <label>м<sup>2</sup> </label>
+                        </div>
+                    </div>
+                    <div class="col-12 row p-0 mx-auto">
+                        <div class="col-md-2 col-12 my-2 p-0">
+                            <input type="text" class="form-control col-12" placeholder="№ заявки">
+                        </div>
+                        <div class="col-md-4 col-12 p-0 px-md-2">
+                            <select class="form-control my-2">
+                                <option value="">Земельный участок</option>
+                                <option value="">Промышленная база</option>
+
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-12 p-0">
+                            <input type="text" class="form-control my-2" placeholder="Направление">
+                        </div>
+                    </div>
+                </form>
+            </nav>
+        </section>
+
+        <section class="object-bar col-12 p-0">
+            <ul class="nav nav-pills">
+                <li class="nav-item col-md-auto col-6 my-1 pl-0">
+                    <a class="nav-link" href="adminAddPlace.html">Добавить</a>
+                </li>
+                <li class="nav-item col-sm-auto  pl-0">
+                    <select class="form-control w-auto col-12">
+                        <option>Все</option>
+                        <option>Проданные</option>
+                        <option>Удаленные</option>
+                    </select>
+                </li>
+                <div class="btn-group col-sm-auto col-12 mt-2 mt-sm-0 p-0" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary active">30</button>
+                    <button type="button" class="btn btn-primary">60</button>
+                    <button type="button" class="btn btn-primary">90</button>
+                </div>
+            </ul>
+        </section>
+
+        <section class="object-cards row no-gutters">
+            <a href="adminObject.html" class="card col-lg-3 col-md-5 col-12 mx-0">
+                <div class="card-head p-1 col-12">
+                    <h4>№12345</h4>
+                </div>
+                <img src="images/cottage.jpg" class="card-img-top" alt="...">
+                <div class="card-body col-12 p-2">
+                    <p>Александровский тракт</p>
+                    <p>Поднебесный</p>
+                    <div class="justify-content-between">
+                        <h4>1060 тыс.р.</h4>
+                        <p> 106 сот.</p>
+                    </div>
+                    <p><span>10</span> тыс.р./сотку</p>
+                </div>
+            </a>
+            <a href="adminObject.html" class="card col-lg-3 col-md-5 col-12 mx-0">
+                <div class="card-head p-1 col-12">
+                    <h4>№12345</h4>
+                </div>
+                <img src="images/cottage.jpg" class="card-img-top" alt="...">
+                <div class="card-body col-12 p-2">
+                    <p>Александровский тракт</p>
+                    <p>Поднебесный</p>
+                    <div class="justify-content-between">
+                        <h4>1060 тыс.р.</h4>
+                        <p> 106 сот.</p>
+                    </div>
+                    <p><span>10</span> тыс.р./сотку</p>
+                </div>
+            </a>
+            <a href="adminObject.html" class="card col-lg-3 col-md-5 col-12 mx-0">
+                <div class="card-head p-1 col-12">
+                    <h4>№12345</h4>
+                </div>
+                <img src="images/cottage.jpg" class="card-img-top" alt="...">
+                <div class="card-body col-12 p-2">
+                    <p>Александровский тракт</p>
+                    <p>Поднебесный</p>
+                    <div class="justify-content-between">
+                        <h4>1060 тыс.р.</h4>
+                        <p> 106 сот.</p>
+                    </div>
+                    <p><span>10</span> тыс.р./сотку</p>
+                </div>
+            </a>
+        </section>
+        
+        <section class="col-12 mt-2">
+            <nav aria-label="Пример навигации по страницам">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&#171;</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">&#187;</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <wbr>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+        <script src="jquery-3.6.0.min.js"></script>
+
+    <script src="script.js"></script>
+    <!-- <script id="rendered-js" >
+    //# sourceURL=pen.js
+    </script> -->
+</body>
+
+</html>

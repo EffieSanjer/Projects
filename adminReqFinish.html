@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--???-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="admin_style.css">
+    <link rel="stylesheet" media="screen" href="media.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗемляИрк</title>
+</head>
+
+<body class="container">
+    <header class="container row no-gutters">
+        <nav class="navbar navbar-expand-lg navbar-dark col-12">
+            <a class="navbar-brand" href="#">ЗемляИрк</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav col-12">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Заявки
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item active" href="adminRequests.html">Все заявки</a>
+                            <a class="dropdown-item" href="#">Мои заявки</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Пользователи
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminUsers.html">Все пользователи</a>
+                            <a class="dropdown-item" href="adminRoles.html">Права</a>
+                            <a class="dropdown-item" href="#">Клиенты в моих заявках</a>
+                            <a class="dropdown-item" href="adminTeam.html">Наша команда</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="adminMess.html">Сообщения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adminFeedback.html">Обратная связь</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Объекты
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="adminObj.html">Все объекты</a>
+                            <a class="dropdown-item" href="adminRoads.html">Все тракты и пункты</a>
+                        </div>
+                    </li>
+                    <li class="nav-item flex-grow-1 text-right">
+                        <a class="nav-link" href="#"> <i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+        <section>
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <a href="admin.html">Панель администратора</a>
+                <a href="adminRequests.html">Заявки</a>
+                <p>Заявка №12345</p>
+            </div>
+            <!-- <h4 class="user">Иван Иванов</h4> -->
+            <h1>Завершение заявки №12345</h1>
+        </section>
+        <section class="row mx-auto">
+            <div class="col-lg-7 col-12">
+                <div class="row py-md-4 pr-lg-5">
+                    <h4 class="col-12 p-0">Название заявки <a href="" title="На покупку"
+                            class="fas fa-arrow-circle-down text-danger"></a></h4>
+                    <p class="col-md-8 col-4 p-0">Объект: </p>
+                    <a href="place.html" class="col-md-4 col-8 text-right p-0"> №12345</a>
+
+                    <p class="col-md-7 col-12 m-0 m-md-auto p-0">Покупатель: </p>
+                    <a href="#" class="col-md-5 col-12 text-md-right p-0">Николай Ватрушкин</a>
+
+                    <p class="col-md-7 col-12 mb-0 mt-2 m-md-auto p-0">Продавец: </p>
+                    <a href="#" class="col-md-5 col-12 text-md-right p-0">Петр Кнопочкин</a>
+                </div>
+
+                <div class="row py-md-4 pr-lg-5 ">
+                    <p class="col-md-8 col-12 p-0 p-md-auto mb-0 mt-2">ЗемляИрк получает 2%:</p>
+                    <p class="col-md-4 col-12 text-md-right p-0"><span>41</span> тыс.р.</p>
+
+                    <p class="col-md-8 col-12 p-0 p-md-auto mb-0 mt-2">Продавец получает 98%:</p>
+                    <p class="col-md-4 col-12 text-md-right p-0 "><span>2 009</span> тыс.р.</p>
+
+                    <p class="col-md-8 col-12 p-0 p-md-auto mb-0 mt-2">Покупатель оплачивает:</p>
+                    <p class="col-md-4 col-12 text-md-right p-0"><span>2 050</span> тыс.р.</p>
+                </div>
+
+                <div class="row py-md-4 pr-lg-5 ">
+                    <p class="col-md-8 col-12 p-0 p-md-auto mb-0 mt-2">Договор между соронами подписан:</p>
+                    <p class="col-md-4 col-12 text-md-right p-0">01.02.2021</p>
+
+                    <p class="col-md-8 col-12 p-0 p-md-auto mb-0 mt-2">Расчет между сторонами произведен:</p>
+                    <p class="col-md-4 col-12 text-md-right p-0">02.02.2021</p>
+
+                    <p class="col-md-8 col-12 p-0 p-md-auto mb-0 mt-2">Документы сданы в ФРС:</p>
+                    <p class="col-md-4 col-12 text-md-right p-0">03.02.2021</p>
+
+                    <p class="col-md-8 col-12 p-0 p-md-auto mb-0 mt-2">Расчет с нашей компанией произведен:</p>
+                    <p class="col-md-4 col-12 text-md-right p-0">04.02.2021</p>
+                </div>
+
+
+            </div>
+
+            <div class="col-lg-5 col-12 p-0 p-md-auto">
+
+                <p class="col-12 m-auto text-right py-3 p-0">Дата соглашения:
+                    <span class="col-12 col-md-auto d-inline-block p-0"> 1 февраля 2021</span>
+                </p>
+                <h3 class="col-12 m-auto text-right py-3 p-0">Стоимость:
+                    <span class="col-12 col-md-auto d-inline-block p-0"> 2 050 тыс. руб.</span>
+                </h3>
+
+                <div class="card my-3">
+                    <p class="card-header p-2">Участники</p>
+                    <ul class="list-group list-group-flush members">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Петр Птеров
+                            <a href="#" class="fas fa-trash badge-pill"></a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Иван Картонкин
+                            <a href="#" class="fas fa-trash badge-pill"></a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Екатерина Суглина
+                            <a href="#" class="fas fa-trash badge-pill"></a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Марина Вокина
+                            <a href="#" class="fas fa-trash badge-pill"></a>
+                        </li>
+                    </ul>
+
+                    <p class="p-2"><a href="#" class="fas fa-plus"></a></p>
+                </div>
+
+                <div class="col-12 py-2 p-0">
+                    <div class="list-group docs finish">
+                        <div href="#" class="list-group-item list-group-item-action">
+                            <div class="d-sm-flex w-100 justify-content-between">
+                                <h5 class="mb-1"><a href=""> Документ.docx</a></h5>
+                                <p class="w-100 d-flex justify-content-sm-around justify-content-between">
+                                    <small>1.2Мб</small>
+                                    <small>01.02.2021</small>
+                                </p>
+                            </div>
+                            <p class="d-flex w-100 justify-content-between py-3 m-0">
+                                <small>Олег Банкин</small>
+                                <a href="#" class="fas fa-trash badge-pill"></a>
+                            </p>
+                        </div>
+                        <div href="#" class="list-group-item list-group-item-action">
+                            <div class="d-sm-flex w-100 justify-content-between">
+                                <h5 class="mb-1"><a href=""> Документ.docx</a></h5>
+                                <p class="w-100 d-flex justify-content-sm-around justify-content-between">
+                                    <small>1.2Мб</small>
+                                    <small>01.02.2021</small>
+                                </p>
+                            </div>
+                            <p class="d-flex w-100 justify-content-between py-3 m-0">
+                                <small>Олег Банкин</small>
+                                <a href="#" class="fas fa-trash badge-pill"></a>
+                            </p>
+                        </div>
+                        <div href="#" class="list-group-item list-group-item-action">
+                            <div class="d-sm-flex w-100 justify-content-between">
+                                <h5 class="mb-1"><a href=""> Документ.docx</a></h5>
+                                <p class="w-100 d-flex justify-content-sm-around justify-content-between">
+                                    <small>1.2Мб</small>
+                                    <small>01.02.2021</small>
+                                </p>
+                            </div>
+                            <p class="d-flex w-100 justify-content-between py-3 m-0">
+                                <small>Олег Банкин</small>
+                                <a href="#" class="fas fa-trash badge-pill"></a>
+                            </p>
+                        </div>
+                        <div href="#" class="list-group-item list-group-item-action">
+                            <div class="d-sm-flex w-100 justify-content-between">
+                                <h5 class="mb-1"><a href=""> Документ.docx</a></h5>
+                                <p class="w-100 d-flex justify-content-sm-around justify-content-between">
+                                    <small>1.2Мб</small>
+                                    <small>01.02.2021</small>
+                                </p>
+                            </div>
+                            <p class="d-flex w-100 justify-content-between py-3 m-0">
+                                <small>Олег Банкин</small>
+                                <a href="#" class="fas fa-trash badge-pill"></a>
+                            </p>
+                        </div>
+                        <div href="#" class="list-group-item list-group-item-action">
+                            <div class="d-sm-flex w-100 justify-content-between">
+                                <h5 class="mb-1"><a href=""> Документ.docx</a></h5>
+                                <p class="w-100 d-flex justify-content-sm-around justify-content-between">
+                                    <small>1.2Мб</small>
+                                    <small>01.02.2021</small>
+                                </p>
+                            </div>
+                            <p class="d-flex w-100 justify-content-between py-3 m-0">
+                                <small>Олег Банкин</small>
+                                <a href="#" class="fas fa-trash badge-pill"></a>
+                            </p>
+                        </div>
+
+
+                    </div>
+                    <p class="p-2"><a href="#" class="fas fa-paperclip"></a></p>
+                </div>
+            </div>
+
+
+        </section>
+        <section class="row mx-auto">
+            <div class="col-lg-7 col-12 p-0">
+                <div class="col-12 p-0 comments">
+                    <div class="card p-0 col-12 my-2">
+                        <div class="card-header">
+                            1 февраля 2021
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Иван Иванов</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus cum tenetur,
+                                nam
+                                ullam
+                                officia officiis minima esse dolore earum quo, rerum odio fugiat cupiditate quaerat
+                                eligendi.
+                                Suscipit hic maxime quam.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card p-0 col-12 my-2">
+                        <div class="card-header">
+                            1 февраля 2021
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Иван Иванов</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus cum tenetur,
+                                nam
+                                ullam
+                                officia officiis minima esse dolore earum quo, rerum odio fugiat cupiditate quaerat
+                                eligendi.
+                                Suscipit hic maxime quam.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card p-0 col-12 my-2">
+                        <div class="card-header">
+                            1 февраля 2021
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Иван Иванов</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus cum tenetur,
+                                nam
+                                ullam
+                                officia officiis minima esse dolore earum quo, rerum odio fugiat cupiditate quaerat
+                                eligendi.
+                                Suscipit hic maxime quam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+        <section class="row py-4 w-100 my-md-3 mx-auto">
+            <div class="form-check form-check-inline col-md-5 p-0">
+                <input class="form-check-input my-auto" type="checkbox" value="" id="delete">
+                <label class="form-check-label" for="delete">Удалить объект</label>
+            </div>
+            <a href="#" class="btn btn-secondary col-md-3 col-12 mx-md-2 my-1">Отменить</a>
+            <a href="#" class="btn btn-success col-md-3 col-12 mx-md-2 my-1">Завершить</a>
+
+
+        </section>
+
+    </main>
+    <wbr>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+        <script src="jquery-3.6.0.min.js"></script>
+
+    <script src="script.js"></script>
+    <!-- <script id="rendered-js" >
+    //# sourceURL=pen.js
+    </script> -->
+</body>
+
+</html>
